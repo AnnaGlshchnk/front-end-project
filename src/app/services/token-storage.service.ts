@@ -12,7 +12,7 @@ export class TokenStorageService {
 
     public saveToken(response) {
         sessionStorage.removeItem(TOKEN_KEY);
-        sessionStorage.setItem(TOKEN_KEY, JSON.stringify(response));
+        sessionStorage.setItem(TOKEN_KEY, response.token);
     }
 
     public getToken(): string {

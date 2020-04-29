@@ -1,9 +1,38 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>tours</ion-title>
-    </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<ion-app>
+    <ion-header translucent>
+        <ion-toolbar>
+            <ion-title>Card</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen>
+        <ion-list *ngFor="let tour of tours">
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>{{tour.tourName}}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-item>
+                        <ion-label>
+                            <ion-label>{{tour.price}}</ion-label>
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>
+                            <ion-label>{{tour.country}}</ion-label>
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>
+                            <ion-label>{{tour.city.name}}</ion-label>
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>
+                            <ion-label>{{tour.description}}</ion-label>
+                        </ion-label>
+                    </ion-item>
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
+    </ion-content>
+</ion-app>
